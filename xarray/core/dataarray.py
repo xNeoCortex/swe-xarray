@@ -2473,6 +2473,11 @@ class DataArray(
         -------
         renamed : DataArray
             Renamed array or array with renamed coordinates.
+        
+        Note
+        ----
+        The new DataArray shares memory with the original DataArray:
+        np.shares_memory(new.values, old.values) is True.
 
         See Also
         --------
